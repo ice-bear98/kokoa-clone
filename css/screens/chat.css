@@ -1,0 +1,152 @@
+.chat-screen {
+  background-color: #abc1d1;
+  height: 500vh;
+}
+
+.chat-screen .status-bar,
+.chat-screen .alt-header {
+  background-color: #abc1d1;
+}
+@keyframes fadein {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadein 0.8s linear;
+}
+.chat__timestamp {
+  text-align: center;
+  background-color: #92a4b2;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+.message-row img {
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.message__author {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.message-row__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: white;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  padding: 8px 13px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.message__time,
+.message__author {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.message-row--own {
+  flex-direction: row-reverse;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+}
+
+.replay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.replay .replay__column:first-child {
+  width: 10%;
+}
+.replay .replay__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.replay i {
+  opacity: 0.5;
+}
+.replay input {
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.replay__column:last-child > i,
+.replay__column:last-child button {
+  position: absolute;
+  right: -4px;
+  top: 2px;
+}
+
+.replay__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+.replay__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.replay__column button i {
+  opacity: 1;
+}
+
+.replay__column button:focus,
+.replay__column button:active {
+  outline: none;
+}
+
+.replay .replay__column:first-child,
+.replay .fa-face-smile,
+.replay button {
+  transition: opacity 0.3s ease-in-out;
+}
+.replay:focus-within .replay__column:first-child,
+.replay:focus-within .fa-face-smile,
+.replay:focus-within button {
+  opacity: 0;
+}
+
+.replay:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%);
+}

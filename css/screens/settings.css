@@ -1,0 +1,39 @@
+.main-screen__settings:not(:last-child) {
+  border-bottom: var(--main-border);
+}
+
+.main-screen__setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-screen__setting i {
+  font-size: 20px;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+.main-screen__setting span:not(.setting-dot) {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-screen__setting-title {
+  display: flex;
+  align-items: center;
+}
+
+.setting-dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  font-size: 8px;
+  line-height: 15px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 50%;
+  background-color: tomato;
+  color: white;
+  margin-left: 10px;
+}
